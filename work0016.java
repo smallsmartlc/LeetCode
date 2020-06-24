@@ -4,38 +4,30 @@ import java.util.Arrays;
 
 public class work0016 {
 	public int threeSumClosest(int[] nums, int target) {
-		Arrays.sort(nums);
-		System.out.println(Arrays.toString(nums));
-		int res = 0;
-		int flag = Integer.MAX_VALUE;
-		if (nums == null || nums.length <= 2) {
+        Arrays.sort(nums);
+        int res = 0;
+        int flag = Integer.MAX_VALUE;
+        if (nums == null || nums.length <= 2) {
 			return 0;
 		}
-			for (int i = 0; i < nums.length; i++) {
-				int l = i+1;
-				int r = nums.length-1;
-				while(l<r) {
-					int sum = nums[i]+nums[l]+nums[r];
-//					System.out.println("nums["+i+"]="+nums[i]+",nums[l]="+nums[l]+",nums[r]="+nums[r]+",i="+i+",l="+l+",r="+r);
-					int now = sum-target;
-//					System.out.println(now);
-//					System.out.println("res="+res);
-					if(now == 0) return sum;
-//					System.out.println(Math.abs(now)<flag);
-					if(Math.abs(now)<flag) {
-						flag = Math.abs(now);
-//						System.out.println("nums["+i+"]="+nums[i]+",nums[l]="+nums[l]+",nums[r]="+nums[r]+",i="+i+",l="+l+",r="+r);
-//						System.out.println("flag="+flag);
-						res = sum;
-						if(now<0) { l++ ;}
-						if(now>0) {r--;}
-					}else if(now<0) { l++ ;}
-					else if(now>0) {r--;}
-				}
+        for (int i = 0; i < nums.length; i++) {
+			int l = i+1;
+			int r = nums.length-1;
+			while (l<r) {
+				int sum = nums[i]+nums[l] + nums[r];
+				int now = sum - target;
+				if(now == 0) return sum;
+				if (Math.abs(now)<flag) {
+					flag = Math.abs(now);
+					res = sum ;
+					if(now<0) l++;
+					if(now>0) r--;
+				}else if(now<0) l++;
+				else if(now>0) r--;
 			}
-		
-		return res;
-	}
+		}
+        return res;
+    }
 	public static void main(String[] args) {
 		work0016 w = new work0016();
 		int[] nums = {1,-1,-1,0};
