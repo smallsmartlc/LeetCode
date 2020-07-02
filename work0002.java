@@ -22,6 +22,12 @@ public class work0002 {
 		if (carry>0) cur.next = new ListNode(carry);
 		return l3.next;
     }
+	public static void main(String[] args) {
+		work0002 w = new work0002();
+		ListNode l1 = new ListNode(2,4,3);
+		ListNode l2 = new ListNode(5,6,4);
+		System.out.println(w.addTwoNumbers(l1, l2));
+	}
 }
 
 
