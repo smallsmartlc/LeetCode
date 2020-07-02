@@ -30,6 +30,7 @@ public class work0003 {
 		}
 		return true;
 	}
+	
 	public static void main(String[] args) {
 		String s = "aaaaabdsdvsdfv";
 		work0003 w = new work0003();
