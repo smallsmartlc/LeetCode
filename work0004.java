@@ -3,9 +3,6 @@ package Leetcode.smart;
 
 
 public class work0004 {
-	public double findMedianSortedArrays(int[] a, int[] b) {
-		return 0;
-	}
 	public double findMedianSortedArraysfalse(int[] nums1, int[] nums2) {
 		int m=nums1.length;
 		int n = nums2.length;
@@ -38,7 +35,7 @@ public class work0004 {
 		int[] a = {1,4,5,8,12};
 		int[] b = {0,6,6,16,20};
 		work0004 w = new work0004();
-//		System.out.println(w.findMedianSortedArrays(a, b));
+		System.out.println(w.findMedianSortedArraysfalse(a, b));
 	}
 }
 
