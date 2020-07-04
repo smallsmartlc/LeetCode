@@ -12,6 +12,7 @@ public class work0007 {
 		}
 		return res;
 	}
+	
 	public static void main(String[] args) {
 		work0007 w = new work0007();
 		System.out.println(w.reverse(214748364));
