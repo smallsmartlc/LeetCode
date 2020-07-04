@@ -12,12 +12,12 @@ public class work0006 {
 		for(int i=0 ;i<n;i++) {
 			for(int j = 0;j<k;j++) {
 				if((i+j*(2*n-2))<c.length) {
-//					res.append(c[i+j*(2*n-2)]);
+					res.append(c[i+j*(2*n-2)]);
 					
 				}
 				if(i!=0&&i!=n-1) {
 					if(((2*n-2-i)+j*(2*n-2))<c.length) {
-//						res.append(c[(2*n-2-i)+j*(2*n-2)]);
+						res.append(c[(2*n-2-i)+j*(2*n-2)]);
 					}
 				}
 			}
@@ -25,7 +25,6 @@ public class work0006 {
 		return res.toString();
     }
 	public String convert(String str, int n) {
-		//???答案没我自己写的快???
 		if (n == 1) return str;
 		List<StringBuilder> list = new LinkedList<>();
 		for(int i=0;i<Math.min(n, str.length());i++) {
@@ -43,6 +42,7 @@ public class work0006 {
 		return res.toString();
 	}
 	public String convertLongTime(String str, int n) {
+		//超时
 		if (n == 1) return str;
 		int k = (int)Math.ceil(str.length()/(double)(2*n-2));
 		String res = "";
@@ -72,7 +72,7 @@ public class work0006 {
 	public static void main(String[] args) {
 		String s = "LEETCODEISHIRING";
 		work0006 w = new work0006();
-		System.out.println(w.convert2(s, 4));
+		System.out.println(w.convertLongTime(s, 4));
 	}
 }
 
