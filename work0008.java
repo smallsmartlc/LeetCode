@@ -2,6 +2,7 @@ package Leetcode.smart;
 
 //2^31-1=2147483647,-2^31=-2147483648
 public class work0008 {
+	//注意边界条件
 	public int myAtoi(String str) {
 		if (str.length() == 0)
 			return 0;
