@@ -2,7 +2,7 @@ package Leetcode.smart;
 
 
 /**
-
+	回溯法以及动态规划
  */
 public class work0063 {
 	public int uniquePathsWithObstacles(int[][] obstacleGrid) {
