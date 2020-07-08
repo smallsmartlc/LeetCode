@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Leetcode0017 电话号码的字母组合
+ * @author SmallSmart
+ *
+ */
+
 public class work0017 {
 	List<String> list = new ArrayList<>();
 	public List<String> letterCombinations2(String s){
@@ -40,9 +46,7 @@ public class work0017 {
 				}
 			}
 		}
-		
 		return list;
-
     }
 	public static void main(String[] args) {
 		work0017 w = new work0017();
