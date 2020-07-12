@@ -1,6 +1,5 @@
 package Leetcode.smart;
 
-
 public class work0021 {
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 		if(l1==null) return l2;
@@ -15,8 +14,8 @@ public class work0021 {
     }
 	public static void main(String[] args) {
 		work0021 w = new work0021();
-		ListNode n1 = new ListNode(1,2,4);
 		ListNode n2 = new ListNode(1,3,4);
+		ListNode n1 = new ListNode(1,2,4);
 		System.out.println(w.mergeTwoLists(n1,n2));
 	}
 }
