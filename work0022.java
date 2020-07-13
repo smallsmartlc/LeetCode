@@ -26,7 +26,7 @@ public class work0022 {
 			cur.deleteCharAt(cur.length()-1);
 		}
 	}
-
+	
 	public static void main(String[] args) {
 		work0022 w = new work0022();
 		System.out.println(w.generateParenthesis(3));
