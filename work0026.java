@@ -12,7 +12,6 @@ public class work0026 {
 		}
 		return i+1;
 	}
-
 	public static void main(String[] args) {
 		work0026 w = new work0026();
 		int[] nums = {1,1,2,2,2,2,3,4,5} ;
