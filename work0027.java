@@ -6,11 +6,10 @@ public class work0027 {
 		int i = 0;
 		for(int j=0;j<nums.length;j++) {
 			if(nums[j]!=val) {
-				i++;
 				nums[i]=nums[j];
+				i++;
 			}
 		}
-		
 		return i;
 	}
 
