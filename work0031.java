@@ -1,6 +1,14 @@
 package Leetcode.smart;
 
 public class work0031 {
+	public static void main(String[] args) {
+		work0031 w = new work0031();
+		int[] nums = new int[]{2,3,1};
+		w.nextPermutation(nums);
+		for (int i = 0; i < nums.length; i++) {
+			System.out.print(nums[i]+",");
+		}
+	}
 	public void nextPermutation(int[] nums) {
 		int i = nums.length-2;
 		while(i>=0&&nums[i+1]<=nums[i]) {
@@ -26,13 +34,5 @@ public class work0031 {
 		int temp = nums[i];
 		nums[i] = nums[j];
 		nums[j] = temp;
-	}
-	public static void main(String[] args) {
-		work0031 w = new work0031();
-		int[] nums = new int[]{2,3,1};
-		w.nextPermutation(nums);
-		for (int i = 0; i < nums.length; i++) {
-			System.out.print(nums[i]+",");
-		}
 	}
 }
