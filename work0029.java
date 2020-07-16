@@ -16,7 +16,6 @@ public class work0029 {
 				i++;
 			}
 		}
-		
 		int m = 1;
 		if(dividend<0||divisor<0) m=-1;
 		if(dividend<0&&divisor<0) m=1;
