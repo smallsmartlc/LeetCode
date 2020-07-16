@@ -9,6 +9,7 @@ public class work0031 {
 			System.out.print(nums[i]+",");
 		}
 	}
+	
 	public void nextPermutation(int[] nums) {
 		int i = nums.length-2;
 		while(i>=0&&nums[i+1]<=nums[i]) {
