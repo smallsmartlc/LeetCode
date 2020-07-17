@@ -9,8 +9,8 @@ public class work0034 {
 		int first;
 		int end;
 		while(left<=right) {
-			mid = (left+right)/2;
-			if(nums[mid]==target) {
+			mid = (left + right)/2;
+			if(nums[mid] == target) {
 				first = mid;
 				end = mid;
 				while(first-1>=0&&nums[first-1]==target) {
@@ -21,7 +21,7 @@ public class work0034 {
 				}
 				return new int[]{first,end};
 			}
-			if(nums[mid]>=target) {
+			if(nums[mid] >= target) {
 				right = mid - 1;
 			}else {
 				left = mid + 1;
