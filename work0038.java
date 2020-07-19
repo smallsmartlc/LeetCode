@@ -3,6 +3,10 @@ package Leetcode.smart;
 import java.util.Stack;
 
 public class work0038 {
+	public static void main(String[] args) {
+		work0038 w = new work0038();
+		System.out.println(w.countAndSay(3));
+	}
 	public String countAndSay(int n) {
 		if(n==1) return "1";
 		String res = "1";
@@ -26,9 +30,5 @@ public class work0038 {
 			res = now;
 		}
 		return res;
-    }
-	public static void main(String[] args) {
-		work0038 w = new work0038();
-		System.out.println(w.countAndSay(3));
 	}
 }
