@@ -5,7 +5,6 @@ import java.util.Set;
 
 public class work0036 {
 	public boolean isValidSudoku2(char[][] board) {
-
 		Set<Character> set = null;
 		for(int i = 0;i<board.length;i++) {
 			set = new HashSet<>();
