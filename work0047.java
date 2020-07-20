@@ -24,7 +24,7 @@ import java.util.Set;
 
 public class work0047 {
 	List<List<Integer>> res = new ArrayList<>();
-	public void process(int index,int[] nums,List<Integer> list,Set<Integer> idx) {
+	public void process(int[] nums,List<Integer> list,Set<Integer> idx) {
 		if(list.size()>=nums.length) {
 			res.add(new ArrayList<>(list));
 			return;
@@ -34,7 +34,7 @@ public class work0047 {
 			if(i>0 &&idx.contains(i-1)&& nums[i] == nums[i-1]) continue;
 			idx.add(i);
 			list.add(nums[i]);
-			process(i+1, nums, list,idx);
+			process(nums, list,idx);
 			list.remove(list.size() - 1);
 			idx.remove(i);
 		}
@@ -43,13 +43,12 @@ public class work0047 {
 		Arrays.sort(nums);
 		List<Integer> list = new ArrayList<>();
 		Set<Integer> idx = new HashSet<>();
-		process(0, nums, list,idx);
+		process(nums, list, idx);
 		return res;
-
 	}
 	public static void main(String[] args) {
 		work0047 w = new work0047();
-		int[] nums = new int[] {3,3,0,3};
+		int[] nums = new int[] {1,1,2};
 		System.out.println(w.permuteUnique(nums));
 	}
 }
