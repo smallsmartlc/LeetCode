@@ -1,8 +1,6 @@
 package Leetcode.smart;
 /**
  * ×ó×ª
- * @author SmallSmart
- *
 matrix[j][i] = matrix[i][l-j];
 matrix[i][l-j] = matrix[l-j][l-i];
 matrix[l-j][l-i] = matrix[l-i][j];
