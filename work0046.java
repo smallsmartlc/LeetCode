@@ -21,7 +21,7 @@ import java.util.List;
 
 public class work0046 {
 	List<List<Integer>> res = new ArrayList<>();
-	public void process(int index,int[] nums,List<Integer> list) {
+	public void process(int[] nums,List<Integer> list) {
 		if(list.size()>=nums.length) {
 			res.add(new ArrayList<>(list));
 			return;
@@ -29,13 +29,13 @@ public class work0046 {
 		for(int i=0;i<nums.length;i++) {
 			if(list.contains(nums[i])) continue;
 			list.add(nums[i]);
-			process(i+1, nums, list);
+			process(nums, list);
 			list.remove(list.size() - 1);
 		}
 	}
 	public List<List<Integer>> permute(int[] nums) {
 		List<Integer> list = new ArrayList<>();
-		process(0, nums, list);
+		process(nums, list);
 		return res;
 
 	}
