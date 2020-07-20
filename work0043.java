@@ -28,6 +28,7 @@ public class work0043 {
 		}
 		return res.replaceFirst("^(0)", "");
     }
+	
 	public static void main(String[] args) {
 		work0043 w = new work0043();
 		String num2 = "2";
