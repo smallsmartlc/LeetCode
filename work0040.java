@@ -12,6 +12,7 @@ public class work0040 {
 		process(0, candidates, target, list);
 		return res;
     }
+	
 	public void process(int start,int[] candidates,int target,List<Integer> list) {
 		if(target<0) return ;
 		if(target==0) res.add(new ArrayList<>(list));
