@@ -29,6 +29,7 @@ public class work0050 {
 		}
 		return res;
     }
+	
 	public static void main(String[] args) {
 		work0050 w = new work0050();
 		System.out.println(w.myPow(34.00515,-3));
