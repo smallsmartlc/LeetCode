@@ -1,14 +1,5 @@
 package Leetcode.smart;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-/**
-
- */
 public class work0050 {
 	public double myPow(double x, int n) {
 		//µÝ¹é Í¨¹ý
