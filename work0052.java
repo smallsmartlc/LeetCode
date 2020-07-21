@@ -1,11 +1,8 @@
 package Leetcode.smart;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -25,10 +22,6 @@ public class work0052 {
     }
 	/**
 	 * อจนýมห,nb
-	 * @param n
-	 * @param x
-	 * @param y
-	 * @param list
 	 */
 	public void addRes(int n,int x,int y,List<String> list) {
 		if(list.size()>=n) {
