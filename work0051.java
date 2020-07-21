@@ -8,9 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/**
-
- */
 public class work0051 {
 	List<List<String>> res = new ArrayList<>();
 	Set<Integer> rowlist = new HashSet<>();
@@ -45,11 +42,11 @@ public class work0051 {
 				row1.add(x-i);
 				row2.add(x+i);
 				String temp = "";
-				for(int j = 0;j<n;j++) {
-					if(j==i) {
-						temp+="Q";
-					}else {
-						temp+=".";
+				for (int j = 0; j < n; j++) {
+					if (j == i) {
+						temp += "Q";
+					} else {
+						temp += ".";
 					}
 				}
 				list.add(temp);
