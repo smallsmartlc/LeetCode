@@ -31,7 +31,6 @@ public class work0050 {
     }
 	public static void main(String[] args) {
 		work0050 w = new work0050();
-		Map<Character[], Integer> res = new HashMap<>();
 		System.out.println(w.myPow(34.00515,-3));
 	}
 }
