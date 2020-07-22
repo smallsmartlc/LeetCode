@@ -1,6 +1,6 @@
 package Leetcode.smart;
 
-public class work0057 {
+public class work0058 {
 	public int lengthOfLastWord(String s) {
 		//0ms;
 		s = s.trim();
@@ -17,7 +17,7 @@ public class work0057 {
 		return res[res.length-1].length();
 	}
 	public static void main(String[] args) {
-		work0057 w = new work0057();
+		work0058 w = new work0058();
 		System.out.println(w.lengthOfLastWord("hello world "));
 	}
 }
