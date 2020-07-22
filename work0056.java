@@ -40,6 +40,6 @@ public class work0056 {
 		int[][] nums = new int[][]
 				{{2,3},{4,5},{6,7},{8,9},{1,10}};
 		int [][] res = w.merge(nums);
-		LecoUtil.LecoPrint(nums);
+		LecoUtil.LecoPrint(res);
 	}
 }
