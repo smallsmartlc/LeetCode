@@ -80,8 +80,6 @@ public class work0054 {
 				{{2,5},
 				 {8,4},
 				 {0,-1},};
-		int[][] nums2 = new int[][] {};
 		System.out.println(w.spiralOrder2(nums));
-		
 	}
 }
