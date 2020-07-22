@@ -5,7 +5,7 @@ package Leetcode.smart;
  */
 public class work0055 {
 	public boolean canJump3(int[] nums) {
-		//一个一个跳
+		//一个一个跳,维护一个最远距离,如果最远距离小于下标,返回false
 		int k = 0;
 		for(int i = 0;i<nums.length;i++) {
 			if(i>k) return false;
