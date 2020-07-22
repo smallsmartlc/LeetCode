@@ -1,16 +1,6 @@
 package Leetcode.smart;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-/**
-
- */
 public class work0059 {
 	public int[][] generateMatrix2(int n) {
 		int[][] res = new int[n][n];
@@ -67,10 +57,6 @@ public class work0059 {
 	}
 	public static void main(String[] args) {
 		work0059 w = new work0059();
-		int[][] nums = new int[][]
-				{{1,2,3},
-				 {4,5,6},
-				 {7,8,9},};
 		int[][] res = w.generateMatrix2(5);
 		for(int i = 0;i<res.length;i++) {
 			for (int j = 0; j < res[0].length; j++) {
