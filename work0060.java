@@ -7,6 +7,11 @@ import java.util.List;
 
  */
 public class work0060 {
+	public static void main(String[] args) {
+		work0060 w = new work0060();
+		System.out.println(w.ex(4));
+		System.out.println(w.getPermutation(4, 4));
+	}
 	public int ex(int i) {
 		if(i==0) return 1;
 		int res =1;
@@ -30,12 +35,6 @@ public class work0060 {
 			res += list.get(temp);
 			list.remove(temp);
 		}
-		
 		return res;
     }
-	public static void main(String[] args) {
-		work0060 w = new work0060();
-		System.out.println(w.ex(4));
-		System.out.println(w.getPermutation(4, 4));
-	}
 }
