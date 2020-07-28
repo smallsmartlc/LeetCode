@@ -1,9 +1,4 @@
 package Leetcode.smart;
-
-
-/**
-
- */
 public class work0062 {
 	public long uniquePaths3(int m, int n) {
 		//动态规划,每个方块的总路线等于上面方块的路线+左侧方块的路线
