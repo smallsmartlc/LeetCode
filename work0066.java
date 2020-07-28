@@ -2,6 +2,12 @@ package Leetcode.smart;
 
 
 public class work0066 {
+	public static void main(String[] args) {
+		work0066 w= new work0066();
+		int[] nums = new int[] {9,9,9,9};
+		LecoUtil.LecoPrint(w.plusOne(nums));
+	}
+
 	public int[] plusOne(int[] digits) {
 		digits[digits.length-1]++;
 		for (int i = digits.length-1; i > 0 && digits[i]==10; i--) {
@@ -17,9 +23,4 @@ public class work0066 {
 		}
 		return digits;
     }
-	public static void main(String[] args) {
-		work0066 w= new work0066();
-		int[] nums = new int[] {9,9,9,9};
-		LecoUtil.LecoPrint(w.plusOne(nums));
-	}
 }
