@@ -1,9 +1,6 @@
 package Leetcode.smart;
 
 
-/**
-
- */
 public class work0064 {
 	public int minPathSum(int[][] grid) {
 		int m = grid[0].length; 
@@ -64,7 +61,6 @@ public class work0064 {
 			{1,2,5},
 			{3,2,1}
 		};
-		int[][] nums2 = new int[][] {{1,0}};
 		LecoUtil.LecoPrint(nums);
 		System.out.println(w.minPathSum(nums));
 	}
