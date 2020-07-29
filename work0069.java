@@ -1,6 +1,10 @@
 package Leetcode.smart;
 
 public class work0069 {
+	public static void main(String[] args) {
+		work0069 w= new work0069();
+		System.out.println(w.mySqrt(8));
+	}
 	public int mySqrt(int x) {
 		if(x<1) return 0;
 		if(x<4) return 1;
@@ -18,8 +22,4 @@ public class work0069 {
 		}
 		return right;
     }
-	public static void main(String[] args) {
-		work0069 w= new work0069();
-		System.out.println(w.mySqrt(8));
-	}
 }
