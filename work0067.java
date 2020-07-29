@@ -1,8 +1,11 @@
 package Leetcode.smart;
 
 public class work0067 {
+	public static void main(String[] args) {
+		work0067 w= new work0067();
+		System.out.println(w.addBinary("11","1"));
+	}
 	public String addBinary(String a, String b) {
-		//³¬Ê±
         String res = "";
         if(a.length()<b.length()) {
         	String temp = a;
@@ -29,9 +32,4 @@ public class work0067 {
         if (carry == 1) res = carry + res ;
         return res;
     }
-	public static void main(String[] args) {
-		work0067 w= new work0067();
-		String nums = "1111";
-		System.out.println(w.addBinary("11","1"));
-	}
 }
