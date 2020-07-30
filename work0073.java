@@ -3,7 +3,7 @@ package Leetcode.smart;
 import java.util.HashSet;
 import java.util.Set;
 
-public class work0072 {
+public class work0073 {
 	public void setZeroes(int[][] matrix) {
 		Set<Integer> rowset = new HashSet<>();
 		Set<Integer> colset = new HashSet<>();
@@ -24,7 +24,7 @@ public class work0072 {
 		}
     }
 	public static void main(String[] args) {
-		work0072 w= new work0072();
+		work0073 w= new work0073();
 //		int[][] nums = new int[][]
 //				{{1,2,3},
 //				 {4,0,6},
