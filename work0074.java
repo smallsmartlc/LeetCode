@@ -22,42 +22,42 @@ public class work0074 {
 		return false;
 	}
 	public boolean searchMatrix2(int[][] matrix, int target) {
-		//¶þ·Ö·¨
-		if(matrix.length<1||matrix[0].length<1) return false;
 		int n = matrix.length;
+		if(n<1) return false;
 		int m = matrix[0].length;
+		if(m<1) return false;
 		int left = 0;
 		int right = n-1;
-		
 		while(left<=right) {
-			int mid = (left+right)/2;
-			if(matrix[mid][0]==target||matrix[mid][m-1]==target) return true;
-			if(matrix[mid][0]<target&&matrix[mid][m-1]>target) {
-				n=mid;
+			int mid = (left + right)/2;
+			if(matrix[mid][0] == target||matrix[mid][m-1]==target) {
+				return true;
+			}
+			if(matrix[mid][0] < target && matrix[mid][m-1]>target) {
+				n = mid;
 				left = 0;
 				right = m-1;
 				break;
-			}
-			if(matrix[mid][0]<target) {
-				left = mid+1;
-			}
-			if(matrix[mid][0]>target) {
-				right = mid-1;
+			}else if(matrix[mid][0]>target) {
+				right = mid - 1;
+			}else {
+				left = mid + 1;
 			}
 			n = mid;
 		}
 		while(left<=right) {
-			int mid = (left+right)/2;
-			if(matrix[n][mid]==target) return true;
-			if(matrix[n][mid]<target) {
-				left = mid+1;
+			int mid = (left + right)/2;
+			if(matrix[n][mid] == target) {
+				return true;
 			}
 			if(matrix[n][mid]>target) {
-				right = mid-1;
+				right = mid -1;
+			}else {
+				left = mid + 1;
 			}
 		}
-		return false ;
-    }
+		return false;
+	}
 	
 	public static void main(String[] args) {
 		work0074 w= new work0074();
