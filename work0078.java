@@ -11,13 +11,14 @@ public class work0078 {
     }
 	
 	List<List<Integer>> res = new LinkedList<>();
-	private void find(int[] nums,int index,List<Integer> list) {
+
+	private void find(int[] nums, int index, List<Integer> list) {
 		res.add(new ArrayList<>(list));
-		if (list.size()==nums.length) return;
+		if (list.size() == nums.length) return;
 		for (int i = index; i < nums.length; i++) {
 			list.add(nums[i]);
-			find(nums, i+1, list);
-			list.remove(list.size()-1);
+			find(nums, i + 1, list);
+			list.remove(list.size() - 1);
 		}
 	}
 	
