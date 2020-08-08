@@ -4,17 +4,16 @@ package Leetcode.smart;
 public class work0080 {
 	public int removeDuplicates(int[] nums) {
 		//双指针之同向指针
-		if (nums.length<3) return nums.length;
-		int len = nums.length;
-		int low = 1;
+		if (nums.length < 3) return nums.length;
+		int low = 0;
 		int count = 1;
-		for (int i = 1; i < len;i++) {
-			if(nums[i] == nums[i-1]) {
+		for (int i = 1; i < nums.length; i++) {
+			if (nums[i] == nums[i - 1]) {
 				count++;
-			}else {
+			} else {
 				count = 1;
 			}
-			if(count<3) {
+			if (count < 3) {
 				nums[low] = nums[i];
 				low++;
 			}

@@ -2,7 +2,6 @@ package Leetcode.smart;
 
 
 public class work0079 {
-
 	int row;
 	int col;
 	public boolean exist(char[][] board, String word) {
@@ -62,9 +61,9 @@ public class work0079 {
 	}
 	
 	public static void main(String[] args) {
-		work0079 w= new work0079();
-		char[][] board = LecoUtil.LecoNewChars(4, 3, 'A','B','C','E','S','F','C','S','A','D','E','E');
+		work0079 w = new work0079();
+		char[][] board = LecoUtil.LecoNewChars(4, 3, 'A', 'B', 'C', 'E', 'S', 'F', 'C', 'S', 'A', 'D', 'E', 'E');
 		LecoUtil.LecoPrint(board);
-		System.out.println(w.exist(board,"ABCB"));
+		System.out.println(w.exist(board, "ABCB"));
 	}
 }
