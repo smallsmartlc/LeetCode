@@ -1,6 +1,5 @@
 package Leetcode.smart;
 
-
 public class work0080 {
 	public int removeDuplicates(int[] nums) {
 		//双指针之同向指针
