@@ -3,27 +3,27 @@ package Leetcode.smart;
 public class work0081 {
 	public boolean search(int[] nums, int target) {
 		int left = 0;
-		int right = nums.length-1;
+		int right = nums.length - 1;
 		int mid = 0;
-		while(left<=right) {
-			mid = (left+right)/2;
-			if(nums[mid]==target) return true;
-			if(nums[left]==nums[mid]) {
+		while (left <= right) {
+			mid = (left + right) / 2;
+			if (nums[mid] == target) return true;
+			if (nums[left] == nums[mid]) {
 				left++;
 				continue;
 			}
-			if(nums[left]<nums[mid]) {
-				//或者退化为顺序查找,直接遍历
-				if(nums[left]<=target&&nums[mid]>=target) {
-					right = mid -1 ;
-				}else {
-					left = mid +1;
+			if (nums[left] < nums[mid]) {
+				// 或者退化为顺序查找,直接遍历
+				if (nums[left] <= target && nums[mid] >= target) {
+					right = mid - 1;
+				} else {
+					left = mid + 1;
 				}
-			}else {
-				if(nums[right]>=target&&nums[mid]<=target) {
-					left = mid +1 ;
-				}else {
-					right = mid -1;
+			} else {
+				if (nums[right] >= target && nums[mid] <= target) {
+					left = mid + 1;
+				} else {
+					right = mid - 1;
 				}
 			}
 		}
