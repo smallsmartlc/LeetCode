@@ -18,7 +18,6 @@ public class work0083 {
 	public static void main(String[] args) {
 		work0083 w= new work0083();
 		ListNode head = new ListNode(1,1,2,3,3);
-//		System.out.println(head);
 		System.out.println(w.deleteDuplicates(head));
 	}
 }
