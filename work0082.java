@@ -3,25 +3,23 @@ package Leetcode.smart;
 
 public class work0082 {
 	public ListNode deleteDuplicates2(ListNode head) {
-		if(head==null||head.next==null) return head;
-		//防止头结点重复,定义一个头结点
-		ListNode realHead = new ListNode(0);
-		realHead.next = head;
-		ListNode now = realHead.next;
-		ListNode pre = realHead;
-		while(now!=null&&now.next!=null) {
-			if(now.val==now.next.val) {
-				while(now.next!=null&&now.val==now.next.val) {
-					now.next = now.next.next;
+		ListNode real = new ListNode();
+		real.next = head;
+		ListNode cur = head;
+		ListNode pre = real;
+		while(cur != null && cur.next!=null) {
+			if(cur.val == cur.next.val) {
+				while(cur.next!=null&&cur.val == cur.next.val) {
+					cur = cur.next;
 				}
-				pre.next = now.next;
-				now = pre.next;
+				cur = cur.next;
+				pre.next = cur;
 			}else {
 				pre = pre.next;
-				now = now.next;
+				cur = cur.next;
 			}
 		}
-		return realHead.next;
+		return real.next;
 	}
 	public ListNode deleteDuplicates(ListNode head) {
 		//自己的解法,处理头结点逻辑复杂
