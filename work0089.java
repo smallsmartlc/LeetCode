@@ -8,9 +8,8 @@ public class work0089 {
 		List<Integer> res = new ArrayList<>();
 		res.add(0);
 		for (int i = 0; i < n; i++) {
-			List<Integer> now = new ArrayList<>(res);
-			for (int j=now.size()-1;j>=0;j--) {
-				res.add(now.get(j)+pow(2, i));;
+			for (int j = res.size()-1; j >= 0; j--) {
+				res.add(res.get(j)+pow(2,i));
 			}
 		}
 		return res;
