@@ -8,19 +8,19 @@ public class work0090 {
 	List<List<Integer>> res = new ArrayList<>();
 	public List<List<Integer>> subsetsWithDup(int[] nums) {
 		Arrays.sort(nums);
-		find(0, nums, new ArrayList<>());
+		res.add(new ArrayList<>());
+		find(new ArrayList<>(), 0, nums);
 		return res;
-    }
-	public void find(int index,int[] nums,List<Integer> list) {
-		if(!res.contains(list)) {
-			res.add(new ArrayList<>(list));
-		}
-		if (list.size()==nums.length) {
+	}
+	private void find(List<Integer> list,int index,int[] nums) {
+		if(index == nums.length) {
 			return;
 		}
-		for (int i = index; i < nums.length; i++) {
+		for(int i = index ; i < nums.length ; i++) {
+			if(i>index&&nums[i]==nums[i-1]) continue;//Í¬²ãÖØ¸´£¬Ìø¹ı
 			list.add(nums[i]);
-			find(i+1, nums, list);
+			find(list, i+1, nums);
+			res.add(new ArrayList<>(list));
 			list.remove(list.size()-1);
 		}
 	}
