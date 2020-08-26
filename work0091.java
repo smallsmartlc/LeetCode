@@ -52,6 +52,6 @@ public class work0091 {
 	public static void main(String[] args) {
 		work0091 w= new work0091();
 		int[] nums = new int[] {1,2,2};
-		System.out.println(w.numDecodings("27"));
+		System.out.println(w.numDecodings("29"));
 	}
 }
