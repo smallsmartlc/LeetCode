@@ -25,7 +25,6 @@ public class work0093 {
 			if(i==index&&ch[i]=='0') break;
 		}
 	}
-	
 	public static void main(String[] args) {
 		work0093 w= new work0093();
 		
