@@ -9,7 +9,7 @@ public class work0094 {
 		//½èÖúÕ»µü´ú
 		List<Integer> res = new ArrayList<>();
 		Stack < TreeNode > stack = new Stack < > ();
-		TreeNode cur = root;
+		TreeNode cur = root; 
 		while(cur != null||!stack.empty()) {
 			while(cur!=null) {
 				stack.push(cur);
