@@ -29,6 +29,7 @@ public class work0095 {
 		}
 		return res;
 	}
+	
 	public static void main(String[] args) {
 		work0095 w = new work0095();
 		w.generateTrees(3);
