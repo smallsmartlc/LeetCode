@@ -4,7 +4,7 @@ public class work0080 {
 	public int removeDuplicates(int[] nums) {
 		//双指针之同向指针
 		if (nums.length < 3) return nums.length;
-		int low = 0;
+		int low = 1;
 		int count = 1;
 		for (int i = 1; i < nums.length; i++) {
 			if (nums[i] == nums[i - 1]) {

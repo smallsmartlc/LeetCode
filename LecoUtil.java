@@ -55,6 +55,17 @@ public class LecoUtil {
 		}
 		System.out.println("}");
 	}
+	public static void LecoPrint(Integer[][] nums) {
+		System.out.println("{");
+		for (Integer[] is : nums) {
+			System.out.print("{");
+			for (Integer i : is) {
+				System.out.print(i+",");
+			}
+			System.out.println("},");
+		}
+		System.out.println("}");
+	}
 	public static void LecoPrint(String[][] nums) {
 		System.out.println("{");
 		for (String[] is : nums) {
