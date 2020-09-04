@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class work0113 {
+
 	List<List<Integer>> res = new ArrayList<>();
 	public List<List<Integer>> pathSum(TreeNode root, int sum) {
 		List<Integer> list = new ArrayList<>();
