@@ -1,6 +1,6 @@
 package Leetcode.smart.带随机指针的链表;
 
-class Node {
+public class Node {
 	public int val;
     public Node next;
     public Node random;
