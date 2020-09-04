@@ -30,6 +30,7 @@ public class work0101 {
     }
 
     public boolean isSymmetric(TreeNode root) {
+        //递归
         if (root == null) return true;
         return isMirror(root.left, root.right);
     }
