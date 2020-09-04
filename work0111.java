@@ -3,7 +3,7 @@ package Leetcode.smart;
 
 public class work0111 {
 	public int minDepth(TreeNode root) {
-		if(root==null) return 0 ;
+		if (root == null) return 0;
 		if ((root.left == null) && (root.right == null)) {
 			return 1;
 		}
