@@ -2,6 +2,7 @@ package Leetcode.smart;
 
 
 public class work0111 {
+
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root == null) return false;
         sum -= root.val;
