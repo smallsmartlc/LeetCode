@@ -8,6 +8,7 @@ public class work0109 {
 		TreeNode dif = w.sortedListToBST(nums);
 		System.out.println();
 	}
+
 	public TreeNode sortedListToBST(ListNode head) {
 		if(head == null) return null;
 		ListNode pre = null;
