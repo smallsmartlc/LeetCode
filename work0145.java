@@ -32,12 +32,13 @@ public class work0145 {
 		dif(root);
 		return res;
     }
+
 	private void dif(TreeNode root) {
-		if(root==null) return;
-		if(root.left!=null) {
+		if (root == null) return;
+		if (root.left != null) {
 			dif(root.left);
 		}
-		if (root.right!=null) {
+		if (root.right != null) {
 			dif(root.right);
 		}
 		res.add(root.val);
