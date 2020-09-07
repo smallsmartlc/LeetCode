@@ -6,21 +6,21 @@ import java.util.List;
 
 public class work0120 {
 	public int minimumTotal(List<List<Integer>> triangle) {
-		int[][] dp = new int[triangle.size()][triangle.get(triangle.size()-1).size()];
+		int[][] dp = new int[triangle.size()][triangle.get(triangle.size() - 1).size()];
 		dp[0][0] = triangle.get(0).get(0);
 		int res = Integer.MAX_VALUE;
 		for (int i = 1; i < triangle.size(); i++) {
-			for (int j=0;j<=i;j++) {
-				if (j==0) {
-					dp[i][j] = dp[i-1][j]+triangle.get(i).get(j);
-				}else if(j==i) {
-					dp[i][j] = dp[i-1][j-1]+triangle.get(i).get(j);
-				}else {
-					dp[i][j] = Math.min(dp[i-1][j], dp[i-1][j-1])+triangle.get(i).get(j);
+			for (int j = 0; j <= i; j++) {
+				if (j == 0) {
+					dp[i][j] = dp[i - 1][j] + triangle.get(i).get(j);
+				} else if (j == i) {
+					dp[i][j] = dp[i - 1][j - 1] + triangle.get(i).get(j);
+				} else {
+					dp[i][j] = Math.min(dp[i - 1][j], dp[i - 1][j - 1]) + triangle.get(i).get(j);
 				}
 			}
 		}
-		for (int i : dp[triangle.size()-1]) {
+		for (int i : dp[triangle.size() - 1]) {
 			res = Math.min(res, i);
 		}
 		return res;
