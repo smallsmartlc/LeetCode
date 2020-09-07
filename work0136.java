@@ -42,6 +42,5 @@ public class work0136 {
 		int[] nums = new int[]{4,1,2,1,2};
 		LecoUtil.LecoPrint(nums);
 		System.out.println(w.singleNumber2(nums));
-		
 	}
 }
