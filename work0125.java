@@ -12,7 +12,6 @@ public class work0125 {
             while (!Character.isLetterOrDigit(charArray[j]) && i < j) {
                 j--;
             }
-
             // 如果不相等，就返回false
             if ((int) Character.toLowerCase(charArray[i]) != (int) Character.toLowerCase(charArray[j])) {
                 return false;
