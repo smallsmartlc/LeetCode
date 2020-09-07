@@ -26,6 +26,7 @@ public class work0144 {
 		}
 		return res;
 	}
+
 	List<Integer> res = new ArrayList<>();
 	public List<Integer> preorderTraversal2(TreeNode root) {
 		//ตÝน้
