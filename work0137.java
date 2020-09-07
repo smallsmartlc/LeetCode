@@ -14,8 +14,6 @@ public class work0137 {
 		return nums[i];
 	}
 	public int singleNumber2(int[] nums) {
-		//“ÏªÚ,πÌ≤≈À„∑®
-		//a^b^a = a^a^b,a^a = 0,0^b = b;
 		int seenOnce = 0, seenTwice = 0;
 		for(int i = 0;i<nums.length;i++) {
 			seenOnce = ~seenTwice & (seenOnce ^ nums[i]);
