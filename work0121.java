@@ -2,18 +2,18 @@ package Leetcode.smart;
 
 public class work0121 {
 	public int maxProfit(int[] prices) {
-		if (prices.length<=0) return 0;
-        int res = 0;
-        int min = prices[0];
-        for (int i = 0; i < prices.length; i++) {
-			if(prices[i]<min) {
+		if (prices.length <= 0) return 0;
+		int res = 0;
+		int min = prices[0];
+		for (int i = 0; i < prices.length; i++) {
+			if (prices[i] < min) {
 				min = prices[i];
-			}else if (prices[i]-min>res) {
-				res = prices[i]-min;
+			} else if (prices[i] - min > res) {
+				res = prices[i] - min;
 			}
 		}
-        return res;
-    }
+		return res;
+	}
 	public int maxProfit1(int[] prices) {
 		int res = 0;
 		for (int i = 0; i < prices.length; i++) {
