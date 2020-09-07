@@ -9,8 +9,8 @@ public class work0119 {
 		List<Integer> dp = new ArrayList<>();
 		dp.add(1);
 		for (int i = 1; i <= rowIndex; i++) {
-			for (int j = i-1; j > 0 ; j--) {
-				dp.set(j, dp.get(j)+dp.get(j-1));
+			for (int j = i - 1; j > 0; j--) {
+				dp.set(j, dp.get(j) + dp.get(j - 1));
 			}
 			dp.add(1);
 		}
