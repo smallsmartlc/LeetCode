@@ -16,11 +16,7 @@ public class work0141 {
 		work0141 w = new work0141();
  		ListNode head = new ListNode(3,2,0,-4);
  		ListNode cur = head;
- 		
- 		while(cur.next!=null) {
- 			cur = cur.next;
- 		}
- 		cur.next = head.next;
- 		System.out.println(w.hasCycle(head));
+
+		System.out.println(head);
 	}
 }
