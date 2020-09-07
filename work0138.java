@@ -18,6 +18,7 @@ public class work0138 {
         
         return node;
     }
+
 	public static void main(String[] args) {
 		work0138 w = new work0138();
 		Node node1 = new Node(7);
