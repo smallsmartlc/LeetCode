@@ -172,7 +172,7 @@ class TreeNode {
 
 
 //Definition for a Node.
-//完美二叉树
+//带next指针的二叉树
 class Node {
     public int val;
     public Node left;
