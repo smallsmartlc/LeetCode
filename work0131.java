@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class work0131 {
-	
 	List<List<String>> res = new ArrayList<>();
 	public List<List<String>> partition(String s) {
 		List<String> list = new ArrayList<>();
