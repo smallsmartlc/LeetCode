@@ -8,13 +8,13 @@ public class work0134 {
 		for (int i = 0; i < cost.length; i++) {
 			cur += gas[i] - cost[i];
 			total += cur;
-			if(cur<0) {
-				start = i+1;
+			if (cur < 0) {
+				start = i + 1;
 				cur = 0;
 			}
 		}
-		return total<0?-1:start;
-    }
+		return total < 0 ? -1 : start;
+	}
 	public static void main(String[] args) {
 		work0134 w= new work0134();
 		int[] gas = new int[] {1,2,3,4,5};
