@@ -8,15 +8,15 @@ import Leetcode.smart.¿ËÂ¡Í¼.Node;
 public class work0133 {
 	Map<Integer, Node> map = new HashMap<>();
 	public Node cloneGraph(Node node) {
-		if(node == null) return node;
-		if(map.containsKey(node.val)) return map.get(node.val);
+		if (node == null) return node;
+		if (map.containsKey(node.val)) return map.get(node.val);
 		Node cloneNode = new Node(node.val, new ArrayList());
-        map.put(cloneNode.val, cloneNode);
+		map.put(cloneNode.val, cloneNode);
 		for (Node n : node.neighbors) {
 			cloneNode.neighbors.add(cloneGraph(n));
 		}
 		return cloneNode;
-    }
+	}
 	
 	public static void main(String[] args) {
 		work0133 w= new work0133();
