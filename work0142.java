@@ -9,7 +9,7 @@ public class work0142 {
         	fast = fast.next.next;
         	if(low == fast) {
         		low = head;
-        		while (low!=fast) {
+				while (low != fast) {
 					low = low.next;
 					fast = fast.next;
 				}
