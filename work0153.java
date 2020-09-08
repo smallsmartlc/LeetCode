@@ -22,6 +22,5 @@ public class work0153 {
 		work0153 w = new work0153();
 		int[] nums = new int[]{3,4,5,1,2};
 		System.out.println(w.search(nums));
-		
 	}
 }
