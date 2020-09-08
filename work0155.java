@@ -52,14 +52,16 @@ class MinStack {
     }
 }
 
- class MinStack2 {
+class MinStack2 {
 	//Ë«Õ»·¨
 	Stack<Integer> datastack = new Stack<>();
 	Stack<Integer> minstack = new Stack<>();
-    /** initialize your data structure here. */
-    public MinStack2() {
-    	
-    }
+	/**
+	 * initialize your data structure here.
+	 */
+	public MinStack2() {
+
+	}
     public void push(int x) {
     	datastack.push(x);
     	if(minstack.empty()||x<=minstack.peek()) {
