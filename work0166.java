@@ -8,6 +8,7 @@ public class work0166 {
 		work0166 w = new work0166();
 		System.out.println(w.fractionToDecimal(2, 3));
 	}
+
 	public String fractionToDecimal(int numerator, int denominator) {
 		if (numerator == 0) {
 	        return "0";
