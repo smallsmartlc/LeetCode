@@ -36,7 +36,6 @@ public class work0150 {
 			}
 			stack.push(Integer.parseInt(str));
 		}
-		
 		return stack.pop();
     }
 }
