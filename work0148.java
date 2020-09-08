@@ -8,6 +8,7 @@ public class work0148 {
 		 System.out.println(head);
 		 System.out.println(w.sortList(head));
 	}
+
 	public ListNode sortList(ListNode head) {
 		if (head == null || head.next == null)
 	    return head;
