@@ -7,16 +7,17 @@ public class work0147 {
 		 System.out.println(head);
 		 System.out.println(w.insertionSortList(head));
 	}
+
 	public ListNode insertionSortList(ListNode head) {
-		if(head == null||head.next == null) return head;
+		if (head == null || head.next == null) return head;
 		ListNode realhead = new ListNode();
-		realhead.next = head; 
+		realhead.next = head;
 		ListNode cur = head;
-		while(cur.next!=null) {
-			if(cur.val>cur.next.val) {
+		while (cur.next != null) {
+			if (cur.val > cur.next.val) {
 				ListNode newIndex = head;
 				ListNode newPre = realhead;
-				while(newIndex.val<cur.next.val) {
+				while (newIndex.val < cur.next.val) {
 					newIndex = newIndex.next;
 					newPre = newPre.next;
 				}
@@ -25,10 +26,10 @@ public class work0147 {
 				newPre.next = temp;
 				temp.next = newIndex;
 				head = realhead.next;
-			}else {
-				cur = cur.next ;
+			} else {
+				cur = cur.next;
 			}
 		}
 		return realhead.next;
-    }
+	}
 }
