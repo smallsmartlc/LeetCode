@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class work0151 {
+public class 	work0151 {
 	public static void main(String[] args) {
 		 work0151 w = new work0151();
 		 String s1 ="the sky is blue";
