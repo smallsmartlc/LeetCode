@@ -31,8 +31,8 @@ public class work0198 {
         }
         if (n == 1) return nums[0];
 
-        int dp1 = 0;
-        int dp2 = 0;
+        int dp1 = 0;//前两个房间最大钱数
+        int dp2 = 0;//前一个房间的最大钱数
         for (int i = 0; i < n; i++) {
             int temp = Math.max(dp2, dp1 + nums[i]);
             dp1 = dp2;
