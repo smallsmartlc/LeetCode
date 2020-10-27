@@ -1,16 +1,24 @@
 package Leetcode.smart;
 
 
+import java.util.*;
+
 public class work0215 {
     public static void main(String[] args) {
         work0215 w = new work0215();
         int[] nums = new int[]{2, 1};
-        System.out.println(w.findKthLargest(nums, 2));
+        System.out.println(w.findKthLargest2(nums, 2));
     }
 
     public int findKthLargest2(int[] nums, int k) {
-        //todo 堆排序
-        return 0;
+        //todo 自己实现堆排序
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        for (int num : nums) {
+            priorityQueue.add(num);
+            if(priorityQueue.size()>k) priorityQueue.poll();
+
+        }
+        return priorityQueue.peek();
     }
 
     public int findKthLargest(int[] nums, int k) {
