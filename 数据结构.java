@@ -1,8 +1,6 @@
 package Leetcode.smart;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 class ListNode {
     int val;
@@ -47,11 +45,29 @@ class TreeNode {
 
     @Override
     public String toString() {
-        return "TreeNode{" +
-                "val=" + val +
-                ", left=" + (left==null?null:left.val) +
-                ", right=" + (right==null?null:right.val) +
-                '}';
+        //²ãÐò±éÀúÊä³ö¶þ²æÊ÷
+        Queue<TreeNode> queue = new LinkedList<>();
+        StringBuilder sb = new StringBuilder();
+        queue.add(this);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode poll = queue.poll();
+                if (poll == null) {
+                    sb.append("null");
+                    sb.append('\t');
+                    continue;
+                }
+                if (poll.left != null || poll.right != null) {
+                    queue.add(poll.left);
+                    queue.add(poll.right);
+                }
+                sb.append(poll.val);
+                sb.append('\t');
+            }
+            sb.append('\n');
+        }
+        return sb.toString();
     }
 
     TreeNode(Integer... x) {
