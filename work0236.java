@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 235.二叉搜索树的最近公共祖先
+ * 236.二叉树的最近公共祖先
  */
 public class work0236 {
 
