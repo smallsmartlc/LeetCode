@@ -88,13 +88,4 @@ public class LecoUtil {
 		}
 		System.out.println("}");
 	}
-	public int factorial(int i) {
-		//½×³Ë
-		if(i==0) return 1;
-		int res =1;
-		for(int j = i;j>0;j--) {
-			res*=j;
-		}
-		return res;
-	}
 }
