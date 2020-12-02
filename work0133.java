@@ -1,10 +1,13 @@
 package Leetcode.smart;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-import Leetcode.smart.��¡ͼ.Node;
-
+/**
+ * work0133 克隆图
+ */
 public class work0133 {
 	Map<Integer, Node> map = new HashMap<>();
 	public Node cloneGraph(Node node) {
@@ -37,6 +40,26 @@ public class work0133 {
 		node4.neighbors.add(node1);
 		node4.neighbors.add(node3);
 		Node res = w.cloneGraph(node1);
-		System.out.println();
+	}
+
+	static class Node {
+		//图
+		public int val;
+		public List<Node> neighbors;
+
+		public Node() {
+			val = 0;
+			neighbors = new ArrayList<Node>();
+		}
+
+		public Node(int _val) {
+			val = _val;
+			neighbors = new ArrayList<Node>();
+		}
+
+		public Node(int _val, ArrayList<Node> _neighbors) {
+			val = _val;
+			neighbors = _neighbors;
+		}
 	}
 }
