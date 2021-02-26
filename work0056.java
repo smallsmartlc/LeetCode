@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class work0056 {
 	public int[][] merge(int[][] intervals) {
-		//ÅÅĞò
+		//æ’åº
 		for (int i = 0 ;i<intervals.length-1;i++) {
 			for (int j = 0 ;j<intervals.length-1-i;j++) {
 				if(intervals[j][0]>intervals[j+1][0]) {
