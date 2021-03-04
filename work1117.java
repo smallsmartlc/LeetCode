@@ -1,6 +1,5 @@
 package Leetcode.smart;
 
-import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
 
@@ -63,7 +62,11 @@ public class work1117 {
 
         @Override
         public void run() {
-            h2o.hydrogen(releaseHydrogen);
+            try {
+                h2o.hydrogen(releaseHydrogen);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -79,7 +82,11 @@ public class work1117 {
 
         @Override
         public void run() {
-            h2o.oxygen(releaseOxygen);
+            try {
+                h2o.oxygen(releaseOxygen);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
