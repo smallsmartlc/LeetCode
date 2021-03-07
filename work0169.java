@@ -11,22 +11,42 @@ public class work0169 {
 		System.out.println(w.majorityElement(nums));
 	}
     public int majorityElement0(int[] nums) {
-    	//¹þÏ£±í·¨
+    	//å“ˆå¸Œè¡¨æ³•
     	Map<Integer, Integer> map = new HashMap<>();
     	for (int i : nums) {
-			if(!map.containsKey(i)) {
-				map.put(i, 1);
-			}else {
-				map.put(i, map.get(i)+1);
-			}
+    		map.putIfAbsent(i,0);
+			map.put(i, map.get(i)+1);
 			if(map.get(i)>nums.length/2) return i;
 		}
     	return -1;
     }
-    public int majorityElement(int[] nums) {
-    	//ÅÅÐò·¨
+    public int majorityElement1(int[] nums) {
+    	//æŽ’åºæ³•
     	Arrays.sort(nums);
     	return nums[nums.length/2];
     }
+	public int majorityElement(int[] nums){
+		// æ‘©å°”æŽ’åº
+		int res = nums[0];
+		int count = 0;
+		for (int num : nums) {
+			if(res == num){
+				count++;
+				continue;
+			}
+			if(count == 0){
+				res = num;
+				count++;
+				continue;
+			}
+			count--;
+		}
+		count = 0;
+		for (int num : nums) {
+			if(res == num) count++;
+			if(count > nums.length/2) return res;
+		}
+		return -1;
+	}
 }
 
