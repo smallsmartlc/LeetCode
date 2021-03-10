@@ -21,6 +21,10 @@ public class ForOffer58 {
         }
     }
 
+    public String reverseLeftWords0(String s, int n) {
+        return s.substring(n, s.length() - n - 1) + s.substring(0, n - 1);
+    }
+
     public String reverseLeftWords(String s, int n) {
         StringBuilder res = new StringBuilder();
         for (int i = n; i < s.length(); i++) {
