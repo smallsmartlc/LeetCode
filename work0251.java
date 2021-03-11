@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 
 /**
  * leetcode 251. 展开二维向量
- * lintcode 921. 摊平二维向量
+ * lintcode 601. 摊平二维向量
  */
 public class work0251 {
 
