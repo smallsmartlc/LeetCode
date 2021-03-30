@@ -9,6 +9,7 @@ import java.util.NoSuchElementException;
  * lintcode 448. 二叉查找树的中序后继
  */
 public class work0285 {
+
     public static void main(String[] args) {
         work0285 w = new work0285();
         TreeNode root = new TreeNode(2, 1, 3);
