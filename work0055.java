@@ -5,7 +5,7 @@ package Leetcode.smart;
  */
 public class work0055 {
 	public boolean canJump3(int[] nums) {
-		//Ò»¸öÒ»¸öÌø,Î¬»¤Ò»¸ö×îÔ¶¾àÀë,Èç¹û×îÔ¶¾àÀëĞ¡ÓÚÏÂ±ê,·µ»Øfalse
+		//ä¸€ä¸ªä¸€ä¸ªè·³,ç»´æŠ¤ä¸€ä¸ªæœ€è¿œè·ç¦»,å¦‚æœæœ€è¿œè·ç¦»å°äºä¸‹æ ‡,è¿”å›false
 		int k = 0;
 		for(int i = 0;i<nums.length;i++) {
 			if(i>k) return false;
@@ -14,7 +14,7 @@ public class work0055 {
 		return true;
 	}
 	public boolean canJump2(int[] nums) {
-		//µİ¹é,³¬Ê±
+		//é€’å½’,è¶…æ—¶
 		jump(nums, 0);
 		return res;
     }
