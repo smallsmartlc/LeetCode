@@ -2,7 +2,6 @@ package Leetcode.smart;
 
 
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * leetcode 0324 摆动排序 II
