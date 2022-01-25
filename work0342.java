@@ -1,6 +1,6 @@
 package Leetcode.smart;
 
-//342. 4的幂
+//0344. 反转字符串
 
 public class work0342 {
     public static void main(String[] args) {
