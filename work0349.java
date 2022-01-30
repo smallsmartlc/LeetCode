@@ -51,5 +51,4 @@ public class work0349 {
         }
         return Arrays.copyOfRange(res, 0, index);
     }
-
 }
