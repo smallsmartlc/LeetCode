@@ -14,7 +14,7 @@ public class work0355 {
         obj.postTweet(2, 6);
         System.out.println(obj.getNewsFeed(1));
         obj.unfollow(1, 2);
-        System.out.println(obj.getNewsFeed(5));
+        System.out.println(obj.getNewsFeed(1));
     }
 
     private static class Twitter {
@@ -41,10 +41,10 @@ public class work0355 {
             tweetTime.put(tweetId, time++);
         }
 
-        public List<Integer> getNewsFeed(int userId) {
+        public List<Integer> getNewsFeed0(int userId) {
             // 优先队列
-            PriorityQueue<Integer> queue = new PriorityQueue<>((o1, o2) -> tweetTime.getOrDefault(o2, 0) - tweetTime.getOrDefault(o1, 0));
-            Set<Integer> users = follow.getOrDefault(userId,new HashSet<>());
+            PriorityQueue<Integer> queue = new PriorityQueue<>((o1, o2) -> tweetTime.get(o2) - tweetTime.get(o1));
+            Set<Integer> users = follow.getOrDefault(userId, new HashSet<>());
             users.add(userId);
             for (Integer user : users) {
                 LinkedList<Integer> list = map.get(user);
@@ -54,6 +54,39 @@ public class work0355 {
             List<Integer> res = new ArrayList<>();
             while (!queue.isEmpty() && res.size() < 10) {
                 res.add(queue.poll());
+            }
+            return res;
+        }
+
+        public List<Integer> getNewsFeed(int userId) {
+            //
+            Set<Integer> users = follow.getOrDefault(userId, new HashSet<>());
+            users.add(userId);
+            LinkedList<Integer> res = new LinkedList<>();
+            for (Integer user : users) {
+                LinkedList<Integer> list = map.get(user);
+                if (list == null || list.isEmpty()) continue;
+                res = mergeTwoList(res, list);
+            }
+            return res;
+        }
+
+        private LinkedList<Integer> mergeTwoList(LinkedList<Integer> l1, LinkedList<Integer> l2) {
+            if (l1 == null || l1.isEmpty()) return l2;
+            if (l2 == null || l2.isEmpty()) return l1;
+            l1 = new LinkedList<>(l1);
+            l2 = new LinkedList<>(l2);
+            LinkedList<Integer> res = new LinkedList<>();
+            while (res.size() < 10 && !l1.isEmpty() && !l2.isEmpty()) {
+                if (tweetTime.get(l1.peek()) > tweetTime.get(l2.peek())) {
+                    res.add(l1.poll());
+                } else {
+                    res.add(l2.poll());
+                }
+            }
+            if (l1.isEmpty()) l1 = l2;
+            while (res.size() < 10 && !l1.isEmpty()) {
+                res.add(l1.poll());
             }
             return res;
         }
