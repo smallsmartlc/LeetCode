@@ -1,6 +1,6 @@
 package Leetcode.smart;
 
-//367 有效的完全平方数
+//368 最大整除子集
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,6 +10,7 @@ public class work0368 {
 
     public static void main(String[] args){
         work0368 w = new work0368();
+        System.out.println(w.largestDivisibleSubset(new int[]{1, 2, 3}));
         System.out.println(w.largestDivisibleSubset2(new int[]{1, 2, 3}));
     }
 
