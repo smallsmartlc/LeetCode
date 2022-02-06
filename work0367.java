@@ -14,9 +14,9 @@ public class work0367 {
         int mid;
         while (l <= r){
             mid = l + r >> 1;
-            long n = (long) mid * mid;
+            int n = mid * mid;
             if(n == num) return true;
-            else if(n < num && n > 0){
+            else if(n < num && n / mid == mid){
                 l = mid + 1;
             }else{
                 r = mid - 1;
