@@ -1,7 +1,5 @@
 package Leetcode.smart;
 
-import java.util.Stack;
-
 /**
  * LeetCode0389 找不同
  */
@@ -11,11 +9,20 @@ public class work0389 {
         System.out.println(w.findTheDifference("abcd", "abcde"));
     }
 
+    public char findTheDifference2(String s, String t) {
+        int ret = 0;
+        int n = s.length();
+        for (int i = 0; i < n; i++) { // 两种遍历方式
+            ret ^= s.charAt(i);
+            ret ^= t.charAt(i);
+        }
+        return (char) (ret ^ t.charAt(n));
+    }
     public char findTheDifference(String s, String t) {
-        char c = 0;
+        int c = 0;
         for (char c1 : (s + t).toCharArray()) {
             c ^= c1;
         }
-        return c;
+        return (char) c;
     }
 }
