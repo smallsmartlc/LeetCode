@@ -1,7 +1,7 @@
 package Leetcode.smart;
 
 /**
- * LeetCode0392 判断子序列
+ * LeetCode0393 UTF-8 编码验证
  */
 public class work0393 {
     public static void main(String[] args) {
