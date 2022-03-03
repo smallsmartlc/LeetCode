@@ -1,7 +1,7 @@
 package Leetcode.smart;
 
 /**
- * LeetCode0509 斐波那契数
+ * LeetCode1137 第 N 个泰波那契数
  */
 
 public class work1137 {
