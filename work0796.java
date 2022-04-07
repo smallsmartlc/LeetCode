@@ -10,6 +10,10 @@ public class work0796 {
         System.out.println(w.rotateString("abced", "cedab"));
     }
 
+    public boolean rotateString1(String s, String goal) {
+        return s.length() == goal.length() && (s + s).contains(goal);
+    }
+
     public boolean rotateString(String s, String goal) {
         if (s.length() != goal.length()) return false;
         int n = goal.length();
