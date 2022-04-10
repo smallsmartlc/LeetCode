@@ -1,7 +1,7 @@
 package Leetcode.smart;
 
 /**
- * 0796 得分最高的最小轮调
+ * 0796 旋转字符串
  */
 
 public class work0796 {
