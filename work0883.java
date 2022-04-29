@@ -1,9 +1,7 @@
 package Leetcode.smart;
 
-import java.util.Arrays;
-
 /**
- * 0868 三维形体投影面积
+ * 0883 三维形体投影面积
  */
 
 public class work0883 {
