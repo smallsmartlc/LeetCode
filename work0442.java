@@ -14,23 +14,22 @@ public class work0442 {
     }
 
     public List<Integer> findDuplicates(int... nums) {
-        // 0表示出现了一次,n + 1表示还没出现过
+        // 0表示没出现(占位),-1表示出现过
         ArrayList<Integer> res = new ArrayList<>();
         int n = nums.length;
         for (int i = 0; i < n; i++) {
             while (nums[i] > 0 && nums[i] < n + 1) {
                 int j = nums[i] - 1;
                 if (i == j) {
-                    nums[i] = 0;
+                    nums[i] = -1;
                     continue;
                 }
-                if (nums[j] > 0) {
+                if (nums[j] > -1) {
                     nums[i] = nums[j];
-                    nums[j] = 0;
-                } else if (nums[j] == 0) {
+                    nums[j] = -1;
+                } else {
                     res.add(nums[i]);
-                    nums[i] = n + 1;
-                    break;
+                    nums[i] = 0;
                 }
             }
         }
