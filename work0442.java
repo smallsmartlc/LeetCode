@@ -36,4 +36,18 @@ public class work0442 {
         return res;
     }
 
+    public List<Integer> findDuplicates1(int[] nums) {
+        // 负数表示已经出现
+        int n = nums.length;
+        ArrayList<Integer> res = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            int j = nums[i] > 0 ? nums[i] - 1 : -nums[i] - 1;
+            if (nums[j] < 0) {
+                res.add(j + 1);
+            } else {
+                nums[j] = -nums[j];
+            }
+        }
+        return res;
+    }
 }
